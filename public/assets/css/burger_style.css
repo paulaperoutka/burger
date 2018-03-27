@@ -1,3 +1,25 @@
 /*font-family: 'Luckiest Guy', cursive;
 font-family: 'Aclonica', sans-serif;
 font-family: 'Spicy Rice', cursive;*/
+
+body {
+	font-family: 'Spicy Rice', cursive;
+	color: #777777;
+
+/*	background-image: url("https://tinyurl.com/ydhol9pa");*/
+}
+
+.jumbotron {
+	background-image: url("https://tinyurl.com/yd8kmpjc");
+	width: 100%;
+	color: white;
+	text-align: center;
+}
+
+.col-md-12 {
+	text-align: center;
+}
+
+#burger-image {
+	padding-top: 48px;
+}

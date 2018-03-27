@@ -13,7 +13,7 @@
         <h3>DREAM UP a burger</h3>
           <form action="/burgers" method="POST">
             <input type="text" name="burger_name" placeholder="I'm dreaming of burgers..." id="name" >
-            <button type="submit" class="btn btn-lg">Dreamt up!</button>
+            <button type="submit" class="btn btn-secondary">Dreamt up!</button>
           </form>
       </div>
     </div>  
@@ -24,9 +24,9 @@
         <h3>DEVOUR a burger</h3>
         {{#each burgers}}
           {{#unless this.devoured}}
-            <div class="form-group">
+            <div>
               <form action="/burgers/{{this.id}}?_method=PUT" method="POST">
-                <button type="submit" class="btn btn-lg">
+                <button type="submit" class="btn btn-secondary">
                   {{this.burger_name}}
                 </button>
               </form>
@@ -36,7 +36,7 @@
       </div>
 
       <div class="col-md-4">
-        <img src="../assets/img/burger.js">
+        <img src="https://tinyurl.com/ydhol9pa" class="img-responsive" id="burger-image">
       </div>
 
       <div class="col-md-4">

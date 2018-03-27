@@ -8,14 +8,14 @@ function printQuestionMarks (num) {
 	}
 
 	return arr.toString();
-}
+};
 
 function objToSql(object) {
 	let arr = [];
 
 	for (let key in object) {
 		let value = object[key];
-		if (Object.hasOqnProperty.call(object, key)) {
+		if (Object.hasOwnProperty.call(object, key)) {
 			if (typeof value === "string" && value.indexOf(" ") >= 0) {
 				value = "'" + value + "'";
 			}
@@ -23,7 +23,7 @@ function objToSql(object) {
 		}
 	}
 	return arr.toString();
-}
+};
 
 var orm = {
 
@@ -41,7 +41,8 @@ var orm = {
 		let queryString = "INSERT INTO " + table;
 			queryString += " (";
 			queryString += column.toString();
-			queryString += ") VALUES (";
+			queryString += ") ";
+			queryString += "VALUES (";
 			queryString += printQuestionMarks(value.length);
 			queryString += ") ";
 
@@ -56,7 +57,8 @@ var orm = {
 	},
 
 	updateOne: (table, objColVal, condition, cb) => {
-		let queryString = "UPDATE" + table;
+		let queryString = "UPDATE " + table;
+			queryString += " SET "
 			queryString += objToSql(objColVal);
 			queryString += " WHERE ";
 			queryString += condition;
