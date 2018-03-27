@@ -32,7 +32,7 @@ router.put("/burgers/:id", (req, res) => {
   console.log("condition", condition);
 
   burger.updateOne({
-    devoured: true
+    devoured: req.body.devoured
   }, condition, (result) => {
     if (result.changedRows == 0) {
       return res.status(404).end();

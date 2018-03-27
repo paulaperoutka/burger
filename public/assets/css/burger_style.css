@@ -5,15 +5,18 @@ font-family: 'Spicy Rice', cursive;*/
 body {
 	font-family: 'Spicy Rice', cursive;
 	color: #777777;
-
+	background-image: url(https://tinyurl.com/ycqn89tc);
+	background-size: cover;
+	color: black;
 /*	background-image: url("https://tinyurl.com/ydhol9pa");*/
 }
 
 .jumbotron {
-	background-image: url("https://tinyurl.com/yd8kmpjc");
+/*	background-image: url("https://tinyurl.com/yd8kmpjc");*/
 	width: 100%;
-	color: white;
+/*	color: white;*/
 	text-align: center;
+	opacity: .5;
 }
 
 .col-md-12 {
