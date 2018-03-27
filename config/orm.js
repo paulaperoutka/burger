@@ -25,7 +25,7 @@ function objToSql(object) {
 	return arr.toString();
 };
 
-var orm = {
+const orm = {
 
 	selectAll: (table, cb) => {
 		let queryString = "SELECT * FROM " + table + ";";
@@ -64,8 +64,9 @@ var orm = {
 			queryString += condition;
 
 		console.log(queryString);
+		console.log(objToSql(objColVal));
 
-		connectiion.query(queryString, (error, result) => {
+		connection.query(queryString, (error, result) => {
 			if (error) {
 				throw error;
 			}

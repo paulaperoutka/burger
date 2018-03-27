@@ -33,14 +33,13 @@ router.put("/burgers/:id", (req, res) => {
 
   burger.updateOne({
     devoured: true
-  }, condition, (data) => {
-    // if (result.changedRows == 0) {
-    //   return res.status(404).end();
-    // } else {
-    //   // res.redirect("/");
-    //   res.status(200).end();
-    // }
-    res.redirect("/");
+  }, condition, (result) => {
+    if (result.changedRows == 0) {
+      return res.status(404).end();
+    } else {
+      // res.redirect("/");
+      res.status(200).end();
+    }
   });
 });
 

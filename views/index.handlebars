@@ -12,8 +12,8 @@
       <div class="col-md-12"
         <h3>DREAM UP a burger</h3>
           <form action="/burgers" method="POST">
-            <input type="text" name="burger_name" placeholder="I'm dreaming of burgers..." id="name" >
-            <button type="submit" class="btn btn-secondary">Dreamt up!</button>
+            <input type="text" name="burger_name" placeholder="I'm dreaming of burgers" id="name" >
+            <button type="submit" class="btn btn-secondary">Serve it up!</button>
           </form>
       </div>
     </div>  
@@ -24,13 +24,9 @@
         <h3>DEVOUR a burger</h3>
         {{#each burgers}}
           {{#unless this.devoured}}
-            <div>
-              <form action="/burgers/{{this.id}}?_method=PUT" method="POST">
-                <button type="submit" class="btn btn-secondary">
-                  {{this.burger_name}}
-                </button>
-              </form>
-            </div>
+            <ul>
+              <button type="submit" class="btn btn-secondary" data-id="{{this.id}}">{{this.burger_name}}</button>
+            </ul>
           {{/unless}}
         {{/each}}
       </div>
