@@ -7,6 +7,17 @@
   </div>
 
   <div class="container">
+
+    <div class="row burger-dreamed">
+      <div class="col-md-12"
+        <h3>DREAM UP a burger</h3>
+          <form action="/burgers" method="POST">
+            <input type="text" name="burger_name" placeholder="I'm dreaming of burgers..." id="name" >
+            <button type="submit" class="btn btn-lg">Dreamt up!</button>
+          </form>
+      </div>
+    </div>  
+
     <div class="row">
       
       <div class="col-md-4">
@@ -39,16 +50,6 @@
           {{/each}}
       </div>
     </div>
-
-    <div class="row burger-dreamed">
-      <div class="col-md-12"
-        <h3>DREAM UP a burger</h3>
-          <form action="/burgers" method="POST">
-            <input type="text" name="burger_name" placeholder="I'm dreaming of burgers..." id="name" >
-            <button type="submit" class="btn btn-lg">Dreamt up!</button>
-          </form>
-      </div>
-    </div>  
 
   </div>
 </div

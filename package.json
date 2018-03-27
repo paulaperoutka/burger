@@ -1,0 +1,25 @@
+{
+  "name": "burger-mania",
+  "version": "1.0.0",
+  "description": "Use CRUD methods to \"devour\" and \"dream up\" burgers in a database.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/paulaperoutka/burger.git"
+  },
+  "author": "Paula Peroutka",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/paulaperoutka/burger/issues"
+  },
+  "homepage": "https://github.com/paulaperoutka/burger#readme",
+  "dependencies": {
+    "express": "^4.16.3",
+    "express-handlebars": "^3.0.0",
+    "mysql": "^2.15.0"
+  }
+}
