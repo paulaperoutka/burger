@@ -1,0 +1,54 @@
+<div class="wrapper">
+  <div class="jumbotron">
+    <div class="container">
+      <h1>Burger Mania!</h1>
+      <h2>The online platform for dreaming up & devouring any burger...</h2>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      
+      <div class="col-md-4">
+        <h3>DEVOUR a burger</h3>
+        {{#each burgers}}
+          {{#unless this.devoured}}
+            <div class="form-group">
+              <form action="/burgers/{{this.id}}?_method=PUT" method="POST">
+                <button type="submit" class="btn btn-lg">
+                  {{this.burger_name}}
+                </button>
+              </form>
+            </div>
+          {{/unless}}
+        {{/each}}
+      </div>
+
+      <div class="col-md-4">
+        <img src="../assets/img/burger.js">
+      </div>
+
+      <div class="col-md-4">
+        <h3>Burgers DREAMT & DEVOURED</h3>
+          {{#each burgers}}
+            {{#if this.devoured}}
+              <div class="burger-devoured">
+                {{this.burger_name}}
+              </div
+            {{/if}}
+          {{/each}}
+      </div>
+    </div>
+
+    <div class="row burger-dreamed">
+      <div class="col-md-12"
+        <h3>DREAM UP a burger</h3>
+          <form action="/burgers" method="POST">
+            <input type="text" name="burger_name" placeholder="I'm dreaming of burgers..." id="name" >
+            <button type="submit" class="btn btn-lg">Dreamt up!</button>
+          </form>
+      </div>
+    </div>  
+
+  </div>
+</div
